@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es-CO">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Prototipo funcional para consultar y seguir autorizaciones de citas con especialistas y de medicamentos en las EPS de Colombia. Datos ficticios.">
+  <title>RutaSalud · Seguimiento de autorizaciones</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="saltar" href="#contenido">Saltar al contenido principal</a>
+
+  <header class="barra" id="barra" hidden>
+    <div class="barra__marca">
+      <span class="logo" aria-hidden="true">R</span>
+      <span>RutaSalud</span>
+    </div>
+    <div class="barra__persona" id="selectorPersona"></div>
+    <button class="btn btn--texto" id="btnSalir" type="button">Salir</button>
+  </header>
+
+  <nav class="menu" id="menu" aria-label="Menú principal" hidden>
+    <a href="#/inicio" data-ruta="inicio"><span class="ico" aria-hidden="true">⌂</span><span>Inicio</span></a>
+    <a href="#/medicamentos" data-ruta="medicamentos"><span class="ico" aria-hidden="true">℞</span><span>Medicinas</span></a>
+    <a href="#/notificaciones" data-ruta="notificaciones"><span class="ico" aria-hidden="true">✉</span><span>Avisos <span class="contador" id="contadorAvisos" hidden></span></span></a>
+    <a href="#/historial" data-ruta="historial"><span class="ico" aria-hidden="true">☰</span><span>Historial</span></a>
+    <a href="#/perfil" data-ruta="perfil"><span class="ico" aria-hidden="true">☺</span><span>Perfil</span></a>
+    <a href="#/ajustes" data-ruta="ajustes"><span class="ico" aria-hidden="true">Aa</span><span>Ajustes</span></a>
+    <a href="#/ayuda" data-ruta="ayuda"><span class="ico" aria-hidden="true">?</span><span>Ayuda</span></a>
+  </nav>
+
+  <main id="contenido" tabindex="-1"></main>
+
+  <div class="aviso-flotante" id="toast" role="status" aria-live="polite"></div>
+
+  <dialog id="modal" aria-labelledby="modalTitulo">
+    <div class="modal__cuerpo" id="modalCuerpo"></div>
+    <form method="dialog"><button class="btn btn--secundario" value="cerrar">Cerrar</button></form>
+  </dialog>
+
+  <footer class="pie">Prototipo académico con datos ficticios. No reemplaza los canales oficiales de su EPS.</footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/store.js"></script>
+  <script src="js/views.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
